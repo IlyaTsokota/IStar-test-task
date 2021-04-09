@@ -1,0 +1,26 @@
+@import "base/variables";
+@import "base/nullstyle";
+@import "base/mixins";
+@import "base/media_mixin";
+@import "base/flex_helper";
+@import "base/fonts";
+@import "base/swiper";
+
+* {
+	font-family: $main-font;
+}
+
+.container {
+	position: relative;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+@import "blocks/header";
+@import "blocks/category";
+@import "blocks/categories";
+@import "blocks/breadcrumbs";
+@import "blocks/content";
+@import "blocks/product";
+@import "blocks/subcategories";

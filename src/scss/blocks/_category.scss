@@ -1,0 +1,50 @@
+.category {
+	position: relative;
+	&__link {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include _768 {
+			height: 60px;
+			justify-content: center;
+		}
+	}
+	&--active &__img {
+		filter: invert(31%) sepia(95%) saturate(3255%) hue-rotate(336deg) brightness(95%) contrast(96%);
+	}
+
+	&__img {
+		display: flex;
+		align-items: center;
+		max-width: 42px;
+		height: 42px;
+		@include _768 {
+			display: none;
+		}
+	}
+
+	&__name {
+		margin-top: 15px;
+		color: $main-color;
+		font-size: 15px;
+		text-align: center;
+		@include _768 {
+			color: #fff;
+			font-size: 35px;
+			margin-top: 0;
+		}
+	}
+
+	&--active::before {
+		@include pseudo();
+		top: -15px;
+		width: 100%;
+		height: 3px;
+		background-color: #ee3346;
+		@include _768 {
+			display: none;
+		}
+	}
+}

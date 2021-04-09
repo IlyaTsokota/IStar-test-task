@@ -1,0 +1,96 @@
+.header {
+	&__top {
+		padding: 10px 0;
+		background-color: $main-bg-color;
+	}
+
+	&__top-content {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__top-btn {
+		align-items: center;
+		display: flex;
+	}
+
+	&__top-btn + &__top-btn {
+		margin-left: 30px;
+	}
+
+	&__top-img {
+		height: 25px;
+		width: 25px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__top-arrow {
+		margin: 8px 0 0 8px;
+	}
+
+	&__top-count {
+		margin-left: 6px;
+		color: $main-color;
+		font-size: 16px;
+		line-height: 24px;
+		user-select: none;
+	}
+
+	&__bottom {
+		padding: 18px 0;
+	}
+
+	&__bottom-content {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__bottom-logo {
+		width: 182px;
+		height: 83px;
+		img {
+			max-width: 100%;
+			height: 100%;
+		}
+
+		@include _480 {
+			width: 130px;
+			height: 50px;
+		}
+	}
+
+	&__bottom-info {
+		color: $main-color;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__bottom-link {
+		font-size: 15px;
+		font-weight: 300;
+		text-decoration: underline;
+		@include _480 {
+			font-size: 12px;
+		}
+	}
+
+	&__bottom-tel {
+		margin-top: 11px;
+		font-size: 15px;
+		line-height: 20px;
+		white-space: nowrap;
+	}
+	&__bottom-tel + &__bottom-tel {
+		margin-top: 0px;
+	}
+
+	&__bottom-tel:hover {
+		opacity: 0.7;
+	}
+}

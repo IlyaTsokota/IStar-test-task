@@ -1,0 +1,128 @@
+.categories {
+	background-color: $main-bg-color;
+
+	&__inner {
+		@include _768 {
+			display: flex;
+
+			padding: 20px 0;
+		}
+	}
+
+	&__menu {
+		width: 100%;
+		@include _992 {
+			max-width: 768px;
+			margin: 0 auto;
+		}
+		@include _768 {
+			position: fixed;
+			background-color: #000;
+			width: 100%;
+			height: 100vh;
+			top: 0;
+			z-index: 1000;
+			visibility: hidden;
+			opacity: 0;
+			left: -120%;
+			transition: 0.5s all;
+			&--active {
+				visibility: visible;
+				opacity: 1;
+				left: 0;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		padding: 15px 0;
+		@include _992 {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		@include _768 {
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			overflow-y: auto !important;
+		}
+	}
+
+	&__list-item {
+		width: 115px;
+		@include _1200 {
+			width: 100px;
+		}
+		@include _992 {
+			width: 25%;
+			margin-bottom: 25px;
+		}
+		@include _768 {
+			margin-bottom: 0;
+			width: 100%;
+		}
+	}
+	&__menu-btn {
+		display: none;
+	}
+	@include _768 {
+		&__menu-btn {
+			display: block;
+			position: absolute;
+			top: 18px;
+			right: 15px;
+			width: 40px;
+			height: 20px;
+			cursor: pointer;
+			z-index: 5;
+
+			span {
+				top: 8px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				background-color: #000;
+				transition: 0.5s all;
+
+				&:first-child {
+					top: 0px;
+				}
+				&:last-child {
+					top: auto;
+					bottom: 0px;
+				}
+			}
+			&--active {
+				position: fixed;
+				z-index: 2000;
+				span {
+					background-color: #fff;
+
+					&:first-child {
+						transform: rotate(-45deg);
+						top: 8px;
+					}
+					&:first-child + span {
+						display: none;
+					}
+					&:last-child {
+						transform: rotate(45deg);
+						bottom: 8px;
+					}
+				}
+			}
+		}
+
+		&__menu-title {
+			font-size: 25px;
+			display: block;
+		}
+	}
+	&__menu-title {
+		display: none;
+	}
+}

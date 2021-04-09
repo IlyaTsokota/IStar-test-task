@@ -1,0 +1,27 @@
+.breadcrumbs {
+	margin-top: 32px;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__list-item {
+		padding-bottom: 15px;
+	}
+
+	&__list-link {
+		color: #999999 !important;
+		font-size: 15px;
+	}
+
+	&__list-item--divider {
+		width: 15px;
+		height: 5px;
+		margin: 6px 10px 0;
+	}
+
+	&__list-item--active > &__list-link {
+		color: $main-color !important;
+	}
+}

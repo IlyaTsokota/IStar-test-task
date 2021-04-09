@@ -1,0 +1,13 @@
+.content {
+	margin-top: 54px;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		@include _992 {
+			flex-direction: column;
+		}
+	}
+	@include _768 {
+		margin-top: 25px;
+	}
+}
